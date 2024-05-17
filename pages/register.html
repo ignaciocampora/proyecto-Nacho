@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="podcast, " />
+    <link rel="stylesheet" href="./styleReg.css" />
+    <title>PodCast - Registrarme</title>
+  </head>
+
+  <body>
+    <section class="container">
+
+      <header id="header">
+        <!-- NAVEGACION -->
+        <nav class="nav-main">
+          <a href="../index.html">Inicio</a>
+          <ul>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Categorias</a></li>
+            <li><a href="">Programas</a></li>
+            <li><a href="">Canales</a></li>
+          </ul>
+          <ul>
+            <li><a href="./register.html">Registrarme</a></li>
+            <li><a href="./login.html">Iniciar Sesión</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <div class="contact_form_contacto">
+            <!-- Creo el formulario para completar con la etiqueta FORM
+                            action: indica a que página se manda el formulario
+                            method: es como va a funcionar el formulario -->
+            <div class="form">
+              <h1 class="titulo-formulario">Formulario de Registro</h1><br>
+              <h4>Complete el formulario para su Registro</h4><br>
+              <form action="../pages/register_success.html" method="get" class="form-registro" enctype="multipart/form-data">
+                <!-- Armado de la línea para el ingreso de nombre y apellido 
+                      la etiqueta label for="name" indica que se completa con caracteres alfanuméricos -->
+                <div class="input-box">
+                  <label for="nombre">Ingrese su nombre:</label>
+                  <input name="nombre" type="text" placeholder="Nombre y Apellido" required />
+                </div>
+                <!-- Armado de la línea para el ingreso del correo electrónico
+                      la etiqueta label for="mail" indica que se completa con un @xxx.xxx -->
+                <div class="input-box">
+                  <label for="mail">Ingrese su correo electrónico:</label>
+                  <input name="mail" type="mail" placeholder="abc@abc.com" required />
+                </div>
+                <!-- Armado de la línea para el ingreso del número de teléfono
+                      la etiqueta label for="numero" indica que se completa solamente con números -->
+                <div class="input-box">
+                  <label for="numero">Ingrese su número de teléfono:</label>
+                  <input name="numero" type="number" placeholder="12345678" required />
+                </div>
+                <!-- Armado de la línea para el ingreso del contraseña
+                      la etiqueta label for="contraseña" indica que al escribir se oculta lo que se va poniendo -->
+                <div class="input-box">
+                  <label for="contraseña">Defina su contraseña:</label>
+                  <input name="contraseña" type="password" placeholder="tu contraseña" required />
+                </div>
+                <!-- Armado de la línea para el ingreso del género
+                      la etiqueta for="radio" indica que se debe seleccionar entre las opciones -->
+                <div class="input-box">
+                  <label for="femenino">Femenino</label>
+                  <input name="femenino" type="radio" value="f" />
+                  <label for="masculino">Masculino</label>
+                  <input name="masculino" type="radio" value="m" />
+                  <label for="otro">Otro género</label>
+                  <input name="otro" type="radio" value="o" />
+                </div>
+                <!-- Armado de la línea para el ingreso del pais de origen
+                      la etiqueta <option> permite armar un desplegable -->
+                <div class="input-box">
+                  <label for="pais">Pais de origen</label>
+                  <select name="pais">
+                    <option value="arg">Argentina</option>
+                    <option value="bra">Brasil</option>
+                    <option value="bol">Bolivia</option>
+                    <option value="chi">Chile</option>
+                    <option value="par">Paraguay</option>
+                    <option value="uru">Uruguay</option>
+                    <option value="otr">OTRO...</option>
+                  </select>
+                </div>
+                <!-- Armado de la línea fecha de nacimiento
+                      la etiqueta <input type="date"> genera un calendario para seleccionar una fecha -->
+                <div class="input-box">
+                  <label for="fecha">Fecha de nacimiento</label>
+                  <input name="fecha" type="date" />
+                </div>
+                <!-- 
+                <div class="input-box">
+                  <label for="comentario">Comentarios:</label>
+                  <textarea name="comentario" id="comentario" cols="30" rows="10">Escriba su comentario...</textarea>
+                </div>
+                <br>
+                 -->
+                
+                 <!-- Armado de la línea para la carga de una imagen
+                      la etiqueta <input type="file"> genera un botón de carga para buscar un archivo -->
+                <div class="input-box">
+                  <label for="carga_imagen">Cargue una imagen para su avatar:</label>
+                  <label for="imagen"></label>
+                  <input name="imagen" type="file" />
+                </div>
+
+                <!-- Creo la etiqueta BUTTON y defino
+                              type: submit para enviar la información
+                              type: reset para borrar los datos cargados -->
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar todo</button>
+              </form><br>
+            </div>            
+          </div>
+        </section><br>
+      </main>
+
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="#header">Volver Arriba</a></li>
+        <li><a href="">Contacto</a></li>
+        <li><a href="">Categorias</a></li>
+        <li><a href="">Programas</a></li>
+        <li><a href="">Canales</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
+
+<!-- Utilicé el CSS que generó Tomás, para unificar la parte gráfica -->

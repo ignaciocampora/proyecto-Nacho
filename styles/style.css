@@ -1,0 +1,52 @@
+head {
+    font-family: "Quicksand", sans-serif;
+}
+
+.pod-categories {
+  display: flex;
+  flex-direction: row; /* dirección del eje principal, por defecto siempre es horizontal */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* rompe la formacion y permite reorddenamiento multilinea */
+
+  height: 100%;
+  /* background-color: lightblue; */
+}
+
+.pod-index {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */ /* espesor tipo_de_linea color */
+  /* background-color: lightgrey; */
+}
+
+/* Zona de las Medias Queries ------- Adaptar el contenido a formatos de pantalla mas pequeños */
+
+@media only screen and (max-width: 600px) {
+  .pod-categories {
+    flex-direction: column;
+    /* background-color: lightgreen; */
+  }
+
+  .pod-index {
+    height: calc(80vh / 5.5);
+    width: calc(80vh / 5.5);
+    /* background-color: lightsalmon; */
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1020px) {
+  .pod-categories {
+    /* background-color: lightyellow; */
+    align-content: space-evenly; /*espacios iguales*/
+  }
+
+  .pod-index {
+    width: 150px; /* Ancho de los elementos */
+    height: 150px; /* Altura de los elementos */
+    /* background-color: lightseagreen; */
+  }
+}

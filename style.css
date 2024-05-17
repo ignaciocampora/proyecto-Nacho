@@ -1,0 +1,277 @@
+/* COLORES BA
+GRIS: #38485c
+amarillo #ffdb2e
+azul hover #007bc7 */
+
+:root{
+    /* Colores institucionales */
+    --primary-color: #ffdb2e;
+    --secondary-color:#fdede3;
+    --third-color:#000000;
+    --third-bis-color:#db4648f2;
+    /*colores de fondo*/
+    --bg-color:#38485c;
+    --bg-input-color:#2f1b352c;
+    /*fuente primaria*/
+    --primary-font: "Arial";
+    --secondary-font: "Helvetica";
+
+    
+    /* Arial, sans-serif, Helvetica; */
+}
+
+/* BORRAR DESDE ARRIBA HASTA ESTE COMENTARIO EN CASO DE ERROR CON COLORES O DISEÑO DE PALETA */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+/* 
+header {
+    font-family: var(--secondary-font);
+} */
+
+
+/* Estilos generales */
+/* body, html{
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    } */
+    
+/*     header {
+        background-color: var(--primary-color);
+        padding: 2vh 0;   
+    } */
+
+
+body{
+    background-color: #38485c;
+    color: var(--primary-color);
+    /* color: #fff; */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+/*navegacion*/
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-main {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 50px 0;
+}
+
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li {
+    padding: 10px;
+}
+
+
+/* CARDS */
+.title {
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.pod-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 30px;
+    gap: 16px;
+}
+
+.pod-categories div a:hover {
+    text-decoration: underline;
+}
+
+/*
+ FOOTER */
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 60px 0;
+}
+
+footer ul {
+    display: flex;
+    margin: 0 auto;
+}
+
+footer ul li {
+    padding: 30px;
+}
+
+
+/* AGREGADO PARA ESTILO DE FORMULARIO - EN CASO DE ERROR BORRAR A CONTINUACION TODO LO SIGUIENTE */
+
+label{
+    display: block; 
+      float: center; 	
+  }
+  
+  
+  button{
+      height: 45px; 
+      padding-left: 5px;
+      padding-right: 5px; 	
+      margin-bottom: 20px; 
+      margin-top: 10px; 	
+      text-transform: uppercase;
+      background-color: var(--primary-color); 
+      border-color: var(--primary-color);
+      border-style: solid; 
+      border-radius: 10px;	
+      width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  button p{
+      color: var(--third-color); 
+  }
+  
+  
+  span{
+      color:var(--primary-color); 
+  }
+  
+  
+  .aviso{
+      font-size: 13px;  
+      color: var(--secondary-color);  
+  }
+  
+  
+  h1{
+      font-size: 39px;  
+      text-align: letf; 
+      padding-bottom: 20px; 
+      color: var(--primary-color);
+  }
+  
+  
+  h3{
+      font-size: 16px; 
+      padding-bottom: 30px;
+      color: var(--primary-color);   
+  }
+  
+  
+  p{
+      font-size: 14px; 
+      color: var(--secondary-color); 
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color:var(--bg-color);
+  }
+  
+  
+  ::-webkit-textarea-placeholder {
+   color:var(--third-bis-color);
+  }
+  
+  
+  .formulario input:focus{
+      outline:0;
+      border: 1px solid #97d848;
+  }
+  
+  
+  .formulario textarea:focus{
+      outline:0;
+      border: 1px solid #97d848;
+  }
+
+  /* AGREGADO PARA PROBAR MEDIA QUERIES - CUALQUIER ERROR RESPECTO A ESO BORRAR DESDE ESTE COMENTARIO HASTA ABAJO */
+
+.pod-categories {
+        
+    display: flex;
+    flex-direction: row;/* dirección del eje principal, por defecto siempre es horizontal */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* rompe la formacion y permite reorddenamiento multilinea */
+
+    height: 100%;
+    /* background-color: lightblue; */
+}
+
+.pod-index {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ /* border: 2px solid black; */  /* espesor tipo_de_linea color */
+ /* background-color: lightgrey; */
+}
+
+/* Zona de las Medias Queries ------- Adaptar el contenido a formatos de pantalla mas pequeños */
+
+@media only screen and (max-width: 600px) {
+    
+    .pod-categories {
+        flex-direction: column;
+    /* background-color: lightgreen; */
+    }
+   
+    .pod-index {
+        height: calc(80vh/5.5);
+        width: calc(80vh/5.5);
+        /* background-color: lightsalmon; */
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1020px) {
+    .pod-categories {
+        /* background-color: lightyellow; */
+        align-content: space-evenly; /*espacios iguales*/
+     }
+   
+     .pod-index {
+       width: 150px; /* Ancho de los elementos */
+       height: 150px; /* Altura de los elementos */
+       /* background-color: lightseagreen; */
+     }
+}
